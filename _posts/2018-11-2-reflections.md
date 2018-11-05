@@ -3,7 +3,7 @@ layout: post
 title: "Reflections on Lessons working with in SemanticUI, JS"
 date: 2018-10-29
 excerpt: "We all make mistakes. It's important to reflect to cement your understanding."
-tags: [thought]
+tags: [thought, frontend]
 comments: true
 ---
 I really **really** like the appearance of SemanticUI. Bootstrap is overused. You can always customize,
