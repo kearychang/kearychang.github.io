@@ -3,7 +3,7 @@ layout: post
 title: "Some Notes on Languages (CS)"
 date: 2018-11-05
 excerpt: "A Quick Review of Automata, Regular Language, Regex and CFG"
-tags: [thought, NLP]
+tags: [thought]
 comments: true
 ---
 ### Finite Automata ###

@@ -3,7 +3,7 @@ layout: post
 title: "Github Pages with Jekyll Notes"
 date: 2018-11-05
 excerpt: "Setting up Github Pages and quick rundown of Jekyll"
-tags: [thought, frontend]
+tags: [thought]
 comments: true
 ---
 # Let's Create a Personal Website on Github
