@@ -20,7 +20,7 @@ It comes with simple themes and you can use Markdown instead of HTML.
 3. Install Ruby v2.4.0 or higher (the developer edition)
 4. Run the command **>>gem install jekyll bundler**
 5. Create a repo **$domain_name.github.io** in Github
-6. That URL should now work
+6. That URL should work now
 7. There is a **\_config.yml** file which has line theme: $var
 8. Look for the Jekyll theme you like and set that to $var
 9. Gem file is Ruby's equivalent to package.json in npm. It indicates project dependencies.
@@ -45,9 +45,9 @@ Objects - where to output content
 >{{ page.title }}
 
 Tags - Logic and Control Flow
->{% if page.show_sidebar %}
+>{٪ if page.show_sidebar ٪}
 >...
->{% endif %}
+>{٪ endif ٪}
 
 Filters - Modifies output of **object**
 >{{ "hi" | capitalize }}
@@ -75,7 +75,7 @@ To use markdown, create a file with extension *.md*
 
 ### Includes
 We don't want to repeat ourselves. Code we refer is inside the **\_includes** directory.
-Html or Markdown can be used from **includes** by *{%include navigation.html}*
+Html or Markdown can be used from **includes** by *{٪include navigation.html}*
 One of Jekyll's useful *variables* is page.url where you can check if each link is the current page.
 
 ### Data File
@@ -89,11 +89,12 @@ YAML is used to store array of navigation items.
 You can refer to **data files** by site.data.navigation
 
 >nav>
-  {% for item in site.data.navigation %}
-    a href="{{ item.link }}" {% if page.url == item.link %}style="color: red;"{% endif %}>
-      {{ item.name }}
-    a>
-  {% endfor %}
+{٪ for item in site.data.navigation ٪}
+  a href="{{ item.link }}" {٪ if page.url == item.link ٪} 
+  style="color: red;"{٪ endif ٪}>
+  {{ item.name }}
+  a>
+{٪ endfor ٪}
 >nav>
 
 ### Assets

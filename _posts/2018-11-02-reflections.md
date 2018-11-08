@@ -20,7 +20,7 @@ Comparatively, SemanticUI classifies its **components** as
 
 I decided to try out SemanticUI on a small website project that implements Bernstein's algorithm
 for normalization of a DB schema. This is a sequence of how I built it so far
-1. Wireframe and create a container
+1. Wireframe and create container
 2. Create a SemanticUI grid and put component inside columns
 3. There are 4 sections: header, description, steps and configuration
 4. Header consists of title with segment separating it from description
