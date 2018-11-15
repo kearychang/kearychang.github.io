@@ -10,7 +10,9 @@ comments: true
 **Alphabet** is a set of **characters**. **Strings** are made from sequences of **characters**.
 **Language** is a set of **strings**. The **closure** is all possible **strings**. A **language** is a subset of the **closure**. To determine if a **string** is valid in your **language**, we test it in a mathematical machine, called the **finite automaton**.
 
-**Rules**
+---
+
+### Rules
 There are
 * starting states
 * accepting states
@@ -38,7 +40,9 @@ All **NFA** can be expressed as **DFA**. Efficiency varies between automatons.
 
 A way of stating this is - is there a universe where this sequence of actions leads to the desired outcome?
 
-**NFA -> DFA**
+---
+
+### NFA -> DFA
 1. Subset Construction
 Each state in **DFA** corresponds to set of states in **NFA**.
 Start state in **NFA** is start state in **DFA** plus all epsilon transitions.
@@ -60,7 +64,9 @@ L1 L2 are languages. Then **regular languages** have the property that
 
 e.g. Noun = {} Verb = {} Article = {}, ArticleNounVerbNoun is a sentence made from concatenation of other languages.
 
-**Regular Expressions**
+---
+
+### Regular Expressions
 1. Atomic Regular Expression
 >null, { a }, { epsilon }
 2. Compound Regular Expression
@@ -72,7 +78,9 @@ e.g. Noun = {} Verb = {} Article = {}, ArticleNounVerbNoun is a sentence made fr
 >A|B
 >A{4}
 
-**Thompson's Algorithm**
+---
+
+### Thompson's Algorithm
 Regex matchers convert regular expressions into NFA, then DFAs.
 
 The theorem is that if a language is regular, there is a regular expression for it.
@@ -81,13 +89,17 @@ If we can convert NFA to regular expression, we can read that off it.
 1. Add epsilon transitions to start and accepting states
 2. Eliminate intermediate states between start and accepting states using properties of regular languages
 
-**Transformation**
+---
+
+### Transformation
 DFA - (direct conversion) -> NFA - (state elimination) -> Regex
 Regex - (Thompson's Algorithm) -> NFA - (subset construction) -> DFA
 
-### Nonregular Language ###
+---
 
-### Context Free Grammar ###
+### Nonregular Language
+
+### Context Free Grammar
 So regex matches strings and automata accepts strings in the language. CFGs is a different way to define class of languages.
 It has these 4 objects.
 * nonterminal symbols

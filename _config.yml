@@ -1,6 +1,6 @@
 # Site
 title:              Keary Chang
-bio:                'Prospective software developer with interests in full stack development. I hope to develop software for my generation.'
+bio:                'Recent Ryerson CS grad with prospects in software development. Interests in full stack and algorithms.'
 description:        ""
 reading_time:       true
 words_per_minute:   200
@@ -8,8 +8,8 @@ logo:               'assets/img/logo.JPG'
 background:         'assets/img/placeholder-big.jpg'
 tiled_bg:           false   # Set this true if you want to tile your background image, otherwise it will be covered
 locale:             en_US
-url:                https://kearychang.github.io/
-#http://127.0.0.1:4000
+#url:                https://kearychang.github.io/
+url:                http://127.0.0.1:4000
 
 # Jekyll
 permalink:          /:title/
