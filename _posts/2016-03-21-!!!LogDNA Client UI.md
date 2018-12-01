@@ -21,6 +21,4 @@ Libraries used were LESS and jQuery. There is some basic interactivity. You can
 
 This UI is also responsive for different screens - mobile or desktop.
 
-![Target Appearance](https://raw.githubusercontent.com/kearychang/logDNAHomePage/master/img/css_challenge.png)
-
 Source code is public so you can study its implementation [here](https://raw.githubusercontent.com/kearychang/logDNAHomePage).
