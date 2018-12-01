@@ -13,7 +13,7 @@ comments: true
     
 <center>A beautiful way to visualize JSON information.</center>
      
-This [project](https://github.com/kearychang/logDNAHomePage/) was to implement the front end based on a given image.  
+This [project](https://kearychang.github.io/logDNAHomePage/) was to implement the front end based on a given image.  
 Libraries used were LESS and jQuery. There is some basic interactivity. You can  
 1. show/hide sidebar by toggling menu button on top right
 2. change view of Lorem Ipsum by selecting channel squares on sidebar
@@ -21,4 +21,4 @@ Libraries used were LESS and jQuery. There is some basic interactivity. You can
 
 This UI is also responsive for different screens - mobile or desktop.
 
-Source code is public so you can study its implementation [here](https://raw.githubusercontent.com/kearychang/logDNAHomePage).
+Source code is public so you can study its implementation [here](https://github.com/kearychang/logDNAHomePage/).
