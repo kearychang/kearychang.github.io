@@ -9,7 +9,7 @@ tag:
 comments: true
 ---
 
-![Front End Client UI Homepage](https://raw.githubusercontent.com/kearychang/Front-End-UI/master/img/css_challenge.png)    
+![Front End Client UI Homepage](https://raw.githubusercontent.com/kearychang/Front-End-UI/master/img/css_challenge.JPG)    
     
 <center>A beautiful way to visualize JSON information.</center>
      
