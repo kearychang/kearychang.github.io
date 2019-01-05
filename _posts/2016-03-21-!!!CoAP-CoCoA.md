@@ -20,6 +20,6 @@ Contiki is an open source OS for IoT. It has its own implementation of CoAP. Thi
 
 ---
 
-![Results]((https://raw.githubusercontent.com/kearychang/CoAP-CoCoA/master/img/results.jpg)
+![Results](https://raw.githubusercontent.com/kearychang/CoAP-CoCoA/master/img/results.jpg)
 
 More indepth tutorial is on my [Readme](https://github.com/kearychang/CoAP-CoCoA/blob/master/README.md).
