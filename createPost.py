@@ -45,7 +45,7 @@ for index, tag in enumerate(tagList):
 
 #MARKDOWN CHEAT SHEET
 mrkdown = tk.Text(win, width=80, height=4)
-mrkdown.insert(tk.END, """# H1 #, ## H2 ##, ### H3 ###, **bold**, *italic*, * UL, `code snip`
+mrkdown.insert(tk.END, """# H1 #, ## H2 ##, ### H3 ###, **bold**, *italic*, * UL, `codesnip`, EndOfLine\\
 ![screenshot_name](/assets/*.jpg), [get the pdf](/assets/*.pdf)
 {% highlight html %}CODEBLOCK{%raw%}escape exec{%endraw%}{% endhighlight %}
 ~~~ html/yaml\\nCODEBLOCK~~~""")
