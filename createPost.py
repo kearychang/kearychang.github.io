@@ -9,7 +9,8 @@ win.title("Create blog post GUI")
 
 #CREATE POST BUTTON ACTION
 def createPost():
-    createPostAction(title=postTitle.get(), excerpt=excerptTitle.get(), content=scr.get("1.0", "end-1c"), tagsArr = chVar, isProject = (radVar.get() == 2), folderName = folderComboBox.get())
+    tagsArr = [e for index, e in enumerate(tagList) if chVar[index].get()==1]
+    createPostAction(title=postTitle.get(), excerpt=excerptTitle.get(), content=scr.get("1.0", "end-1c"), tagsArr = tagsArr, isProject = (radVar.get() == 2), folderName = folderComboBox.get())
     return
 
 #BLOG POST TITLE
@@ -27,6 +28,7 @@ excerptTitleTextField.grid(columnspan=2, row=3)
 #BLOG CONTENT
 ttk.Label(win, text="Post Content").grid(column=0, row=4, padx=20)
 scr = scrolledtext.ScrolledText(win, width=80, height=40, wrap=tk.WORD)
+scr.configure(background='lightgray')
 scr.grid(columnspan=2, row=5)
 
 #TAGS
@@ -41,9 +43,18 @@ for index, tag in enumerate(tagList):
     check[index].grid(column=index, row=0)
     check[index].deselect()
 
+#MARKDOWN CHEAT SHEET
+mrkdown = tk.Text(win, width=80, height=4)
+mrkdown.insert(tk.END, """# H1 #, ## H2 ##, ### H3 ###, **bold**, *italic*, * UL, `code snip`
+![screenshot_name](/assets/*.jpg), [get the pdf](/assets/*.pdf)
+{% highlight html %}CODEBLOCK{%raw%}escape exec{%endraw%}{% endhighlight %}
+~~~ html/yaml\\nCODEBLOCK~~~""")
+mrkdown.configure(background='black', foreground='yellow')
+mrkdown.grid(columnspan=2, row=7)
+
 #PROJECT
 radFrame = ttk.LabelFrame(win)
-radFrame.grid(column=0, row=7)
+radFrame.grid(column=0, row=8)
 radVar = tk.IntVar()
 rad1 = tk.Radiobutton(radFrame, text="POST", variable=radVar, value=1)
 rad1.grid(column=0, row=0, sticky=tk.W)

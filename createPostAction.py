@@ -19,24 +19,31 @@ def createPostAction(title, excerpt, content, tagsArr, isProject, folderName):
     else:
         fullTitle = fullTitle + "-" + title + ".md"
     filePath = os.path.join(folderName, fullTitle)
+    filePath.replace(" ", "-")
 
+    #FILE CONTENT HEADER
     fileContent = []
     fileContent.append("---\n")
     fileContent.append("layout: post\n")
-    fileContent.append("title:  " + title + "\n")
-    fileContent.append("date:   " + today + "\n")
+    fileContent.append("title: " + title + "\n")
+    fileContent.append("date: " + today + "\n")
     fileContent.append("excerpt: " + excerpt + "\n")
     if isProject:
         fileContent.append("project: true\n")
         fileContent.append("tag:\n")
+        for tag in tagsArr:
+            fileContent.append("- " + tag + "\n")
     else:
-        fileContent.append("tags:\n")
-    fileContent.append("comments: true")
+        tagsStr = str(tagsArr).replace('\'', "")
+        fileContent.append("tags: " + tagsStr + "\n")
+    fileContent.append("comments: true\n")
     fileContent.append("---\n")
 
-    print(fullTitle)
-    print(filePath)
+    #FILE CONTENT BODY
+    fileContent.append(content)
 
-    #with open(filePath, 'wt') as f:
-        #TO DO
-    #    pass
+    with open(filePath, 'wt') as f:
+        for line in fileContent:
+            f.writelines(line)
+
+    alert(title="Created post file successfully", message = "File {0} was created".format(filePath))
