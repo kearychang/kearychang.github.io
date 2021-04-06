@@ -7,7 +7,7 @@ tags: [Frontend]
 comments: true
 ---
 So you want a quick and easy GUI for a tool?\
-Consider [TKinter](https://docs.python.org/3/library/tkinter.html).\ 
+Consider [TKinter](https://docs.python.org/3/library/tkinter.html). 
 This module ships with Python3 so it doesn't have to be installed.\
 This blog post's Markdown was created using a GUI application that handles the boilerplate of creating Github page posts. 
 ![Create Blog Post GUI](https://raw.githubusercontent.com/kearychang/kearychang.github.io/master/assets/post-project/createPostGUI.jpg)
@@ -71,8 +71,8 @@ tkinter.messagebox.showerror("Title", "Message")
 If you saw these data classes `tkinter.StringVar` or `tkinter.IntVar` and were confused, this section will explain them.\
 Some widgets store state information which we need to retrieve for application logic such as whether a Checkbutton was checked or which Radiobutton was selected.\
 When we interact with some widgets such as clicking on them, the values of these classes will change automatically.\
-For **Entry**, `StringVar` will be the user input.\
+For **Entry**, `StringVar` is the user input.\
 For **ComboBox**, `StringVar` will store the string value of the selected option.\
-For **Checkbutton**, `IntVar` will be 1 if checked and 0 if unchecked.\
-For **Radiobutton**, `IntVar` will be the **n** referring to `tk.Radiobutton(win, text="A", variable=radVar, value=n, command=radCall)`.\
+For **Checkbutton**, `IntVar` is 1 if checked and 0 if unchecked.\
+For **Radiobutton**, `IntVar` is **n** referring to `tk.Radiobutton(radFrame, text="1", variable=radVar, value=n)`.\
 When we call `get()` on `StringVar` and `IntVar`, it returns a string and integer respectively. 
