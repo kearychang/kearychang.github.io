@@ -2,4 +2,6 @@
 
 # Sections
 Blog (In development)
-Wedding Website (Credits to _See [wedding.rampatra.com](http://wedding.rampatra.com/) for template) 
+FreeCodeCamp (front end and back end)
+IoT projects
+Wedding Website (Credits to [rampatra](http://wedding.rampatra.com/) for template) 
