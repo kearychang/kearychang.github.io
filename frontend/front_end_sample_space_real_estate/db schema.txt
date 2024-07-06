@@ -1,0 +1,50 @@
+Celestial Estates DB SCHEMA
+
+create table Account (
+	username varchar(50) PRIMARY KEY,
+	password varchar(100) NOT NULL,
+	salt int NOT NULL,
+	email varchar(100)
+);
+
+create table Place (
+	id int AUTO_INCREMENT PRIMARY KEY,
+	title varchar(100) NOT NULL,
+	price decimal(10,2) NOT NULL,
+	text varchar(300),
+	category int NOT NULL,
+	picture varchar(200)
+);
+
+create table Support (
+	id int AUTO_INCREMENT PRIMARY KEY,
+	order_number int,
+	category int NOT NULL,
+	text varchar(500)
+);
+
+create Table News (
+	id int AUTO_INCREMENT PRIMARY KEY,
+	date_time datetime NOT NULL,		*may need trigger
+	text varchar(2000),
+	urgency int
+);
+
+create table Orders (
+	id int AUTO_INCREMENT PRIMARY KEY,
+	buyer varchar(50) NOT NULL,
+	location int NOT NULL,
+	price decimal(10,2) NOT NULL,
+	area int NOT NULL,
+	date_time datetime NOT NULL,
+	foreign key (buyer) references Account(username) ON DELETE CASCADE,
+	foreign key (location) references Place(id) ON DELETE CASCADE
+);
+
+create table SupportHistory (
+	username varchar(50) NOT NULL,
+	support_id int NOT NULL,
+	primary key (username, support_id),
+	foreign key (username) references Account(username) ON DELETE CASCADE,
+	foreign key (support_id) references Support(id) ON DELETE CASCADE
+);
