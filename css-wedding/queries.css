@@ -254,7 +254,7 @@
 
 @media screen and (max-width: 640px) {
     .hero .hero-content {
-        padding-top: 100%;
+        padding-top: 50%;
     }
 
     #eng-pics .img-wrap i {
@@ -291,13 +291,13 @@
 
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 991px) {
     .hero .hero-content {
-        padding-top: 110%;
+        padding-top: 50%;
     }
     
     .hero .hero-content img {
-        width: 65%;
+        width: 100%;
     }
 
     .hero .btn {
