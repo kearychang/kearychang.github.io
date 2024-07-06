@@ -70,7 +70,7 @@
             <div class="header-content"> 
                 <div class="logo">
                     <a href="#">
-                        <img src="img-wedding/logo.png" alt="Logo">
+                        <img src="img-wedding/logo3.png" alt="Logo">
                     </a>
                 </div>
                 <div class="header-nav">
@@ -162,6 +162,23 @@
     <div id="video-content">
         <h5>Proposal</h5>
     </div>
+    <br>
+    <div class="row">
+        <div class="col text-center">
+        <button type="button" class="btn btn-danger text-center" id="playButton">Play Audio</button>
+        <audio id="myAudio" src="img-wedding/audio_trimmed.mp3"></audio>
+        </div>
+    </div>
+    <script>
+        document.getElementById('playButton').addEventListener('click', function() {
+            var audio = document.getElementById('myAudio');
+            audio.play().then(() => {
+                console.log('Audio playing');
+            }).catch(error => {
+                console.log('Error playing audio:', error);
+            });
+        });
+    </script>
 </section>
 
 <section class="events section-padding" id="events">
