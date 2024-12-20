@@ -18,8 +18,7 @@ def unnest_files_in_cwd():
             # Iterate through files in the subfolder, sorted by natural sort
             for file_name in natural_sort(os.listdir(subfolder_path)):
                 file_path = os.path.join(subfolder_path, file_name)
-
-                if os.path.isfile(file_path):
+                if os.path.isfile(file_path): #and (file_name.endswith('.srt') or file_name.endswith('.mp4')):
                     # Construct new file name: folder_name + "_" + original file_name
                     new_file_name = f"{subfolder}_{file_name}"
                     new_file_path = os.path.join(cwd, new_file_name)
