@@ -28,6 +28,8 @@ bower_components
 build/Release
 jspm_packages/
 typings/
+*.exe
+*.pdb
 .npm
 .eslintcache
 .node_repl_history

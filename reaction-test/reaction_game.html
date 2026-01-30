@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reaction Time Training Game</title>
+    <link rel="stylesheet" href="reaction_game.css">
+</head>
+<body>
+    <div id="game-container">
+        <!-- Header -->
+        <header id="header">Press Space to Start</header>
+        
+        <!-- YouTube Video Embed -->
+        <div id="video-container">
+            <iframe 
+                id="youtube-video"
+                src="https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1&mute=1&loop=1&playlist=dQw4w9WgXcQ"
+                frameborder="0"
+                allow="autoplay; encrypted-media"
+                allowfullscreen>
+            </iframe>
+        </div>
+        
+        <!-- Settings Panel -->
+        <div id="settings-panel">
+            <div class="setting-group">
+                <label for="difficulty-select">Difficulty:</label>
+                <select id="difficulty-select">
+                    <option value="easy">Easy</option>
+                    <option value="medium" selected>Medium</option>
+                    <option value="hard">Hard</option>
+                </select>
+            </div>
+            <div class="setting-group">
+                <label for="reaction-key-input">Reaction Key (A-Z):</label>
+                <input type="text" id="reaction-key-input" maxlength="1" value="R" pattern="[A-Za-z]">
+            </div>
+        </div>
+        
+        <!-- Game Stats -->
+        <div id="stats-panel">
+            <div id="reaction-times-list"></div>
+            <div id="average-time"></div>
+        </div>
+        
+        <!-- Game Status -->
+        <div id="game-status">
+            <div id="current-status"></div>
+            <div id="strikes-count">Talon Strikes: 0/10</div>
+        </div>
+    </div>
+    
+    <script src="reaction_game.js"></script>
+</body>
+</html>
