@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reaction Time Training Game</title>
+    <link rel="stylesheet" href="reaction_game.css">
+</head>
+<body>
+    <div id="game-container">
+        <!-- Header -->
+        <header id="header">Press ` to Start</header>
+
+        <!-- YouTube Video Embed -->
+        <div id="video-container">
+            <iframe 
+                id="youtube-video"
+                width="560" 
+                height="315" 
+                title="YouTube video player" 
+                frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                referrerpolicy="strict-origin-when-cross-origin" 
+                allowfullscreen>
+            </iframe>
+        </div>
+
+        <!-- Settings Panel -->
+        <div id="settings-panel">
+            <div class="setting-group">
+                <label for="difficulty-select">Difficulty:</label>
+                <select id="difficulty-select">
+                    <option value="easy">Easy</option>
+                    <option value="medium" selected>Medium</option>
+                    <option value="hard">Hard</option>
+                </select>
+            </div>
+            <div class="setting-group">
+                <label for="reaction-key-input">Reaction Key (A-Z):</label>
+                <input type="text" id="reaction-key-input" maxlength="1" value="R" pattern="[A-Za-z]">
+            </div>
+            <div class="setting-group">
+                <label>Talon Strike Failure Threshold (ms):</label>
+                <div class="radio-group">
+                    <label><input type="radio" name="failure-threshold" value="200" id="threshold-200"> 200</label>
+                    <label><input type="radio" name="failure-threshold" value="275" id="threshold-275"> 275</label>
+                    <label><input type="radio" name="failure-threshold" value="350" id="threshold-350" checked> 350</label>
+                    <label><input type="radio" name="failure-threshold" value="425" id="threshold-425"> 425</label>
+                    <label><input type="radio" name="failure-threshold" value="500" id="threshold-500"> 500</label>
+                </div>
+            </div>
+            <div class="setting-group">
+                <label for="youtube-url-input">YouTube URL:</label>
+                <div style="display: flex; gap: 5px;">
+                    <input type="text" id="youtube-url-input" placeholder="Paste YouTube link here" style="flex: 1;">
+                    <button id="apply-youtube-btn" style="padding: 5px 15px; cursor: pointer;">Apply</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Game Stats -->
+        <div id="stats-panel">
+            <div id="reaction-times-list"></div>
+            <div id="average-time"></div>
+        </div>
+
+        <!-- Game Status -->
+        <div id="game-status">
+            <div id="current-status"></div>
+            <div id="strikes-count">Talon Strikes: 0/10</div>
+        </div>
+    </div>
+
+    <script src="reaction_game.js"></script>
+</body>
+</html>
